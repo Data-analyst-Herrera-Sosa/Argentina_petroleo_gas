@@ -1,14 +1,11 @@
 # Argentina_petroleo_gas
 Dashboard interactivo sobre la producción histórica de petróleo y gas en Argentina (2006–2026) utilizando Google BigQuery y Looker Studio
+<img width="935" height="702" alt="image" src="https://github.com/user-attachments/assets/11fec245-2b64-4fb5-882b-2a62284a75a9" />
+A partir de analizar el primer dashboard, pudimos notar que Vaca Muerta supera a los yacimientos convencionales en julio de 2021, siendo la empresa lider YPF.
+<img width="693" height="542" alt="image" src="https://github.com/user-attachments/assets/658a2217-5d28-485a-8ed4-3118108ccbb6" />
 
 link:[ bigquery · looker-studio · analisis-de-datos · business-intelligence · sql · hidrocarburos · petroleo-y-gas · argentina · vaca-muerta · etl
 ](https://datastudio.google.com/reporting/cf301dc4-9ae2-439a-b327-3bbab070c847)
-
-
-<img width="839" height="529" alt="image" src="https://github.com/user-attachments/assets/f6562ebb-344e-4267-ad0f-6621898cc483" />
-
-<img width="693" height="542" alt="image" src="https://github.com/user-attachments/assets/658a2217-5d28-485a-8ed4-3118108ccbb6" />
-
 
 ## Resumen Técnico
 
