@@ -1,17 +1,42 @@
-# Argentina Petróleo y Gas
-Dashboard interactivo sobre la producción histórica de petróleo y gas en Argentina (2006–2026) utilizando Google BigQuery y Looker Studio
-<img width="935" height="702" alt="image" src="https://github.com/user-attachments/assets/11fec245-2b64-4fb5-882b-2a62284a75a9" />
-A partir de analizar el primer dashboard, pudimos notar que Vaca Muerta supera a los yacimientos convencionales en julio de 2021, siendo la empresa lider YPF.
-<img width="693" height="542" alt="image" src="https://github.com/user-attachments/assets/658a2217-5d28-485a-8ed4-3118108ccbb6" />
+# Argentina: matriz de producción de gas (2006–2026)
 
-link:[ bigquery · looker-studio · analisis-de-datos · business-intelligence · sql · hidrocarburos · petroleo-y-gas · argentina · vaca-muerta · etl
-](https://datastudio.google.com/reporting/cf301dc4-9ae2-439a-b327-3bbab070c847)
+Dashboard interactivo sobre la evolución de la producción de gas natural en Argentina, construido con Google BigQuery y Looker Studio a partir de datos abiertos de la Secretaría de Energía.
 
-## Resumen Técnico
+🔗 **[Ver dashboard en Looker Studio](https://datastudio.google.com/reporting/cf301dc4-9ae2-439a-b327-3bbab070c847)**
 
-1. Se elaboro la base de datos en a partir de los datos de la Secretaria de Energía de Argentina. https://datos.gob.ar/dataset/produccion-de-petroleo-y-gas-por-pozo
-2. En google big query se ejecuto una consulta para hacer un union all de todas las tablas. Luego se creo una nueva tabla que solo contenia las columnas que nos parecian relevantes para el dashboard
-3. A partir de la nueva tabla armamos el dashboard de la producción de gas y petróleo entre 2006 hasta Julio de 2026
+![Dashboard](https://github.com/user-attachments/assets/cc1db1cf-df78-4ed7-afed-72546b24f0ce)
 
+## Pregunta guía
+**¿Cómo cambió la matriz de producción de gas y quiénes lideran ese cambio?**
 
-El dashboard sigue en desarrollo y fue creado con asistencia de inteligencia artificial Gemini flash 3.7
+## Hallazgos principales
+- **El no convencional superó al convencional en julio de 2021** y hoy explica cerca del 70% de la producción.
+- **YPF lidera la producción total** (263,8 MMm3 acumulados) y es, por amplio margen, la principal productora no convencional (87,5 MMm3, frente a 27,6 de Total Austral).
+- **Total Austral sigue siendo la mayor productora convencional** (222 MMm3), lo que muestra dos perfiles: empresas que lideran la transición y empresas que sostienen la producción histórica.
+- Los KPIs del dashboard (% no convencional sobre el total y variación interanual) permiten filtrar por empresa y período.
+
+## Datos
+- Fuente: [Producción de petróleo y gas por pozo – Secretaría de Energía (datos.gob.ar)](https://datos.gob.ar/dataset/produccion-de-petroleo-y-gas-por-pozo)
+- Granularidad: mensual, por pozo y empresa. Unidad: MMm3.
+
+## Proceso técnico
+1. **Ingesta:** carga de los archivos de la Secretaría de Energía en BigQuery.
+2. **Unificación:** `UNION ALL` de todas las tablas en una sola.
+3. **Selección de variables:** nueva tabla solo con las columnas relevantes (fecha, empresa, tipo de recurso, producción de gas).
+4. **Visualización:** dashboard en Looker Studio con filtros por empresa e intervalo temporal, dos KPIs, serie temporal, tabla con mapa de calor y gráfico de participación no convencional.
+
+```sql
+-- Agregar aquí tu query de UNION ALL / tabla final
+```
+
+## Limitaciones y próximos pasos
+- "No convencional" incluye Vaca Muerta pero también otras formaciones; el dataset no permite aislarlas.
+- Algunos nombres de empresa aparecen duplicados por razón social (ej. Pan American Energy); queda pendiente normalizarlos.
+- Incorporar producción de petróleo.
+
+## Herramientas
+BigQuery · SQL · Looker Studio · Desarrollado con asistencia de IA (Gemini) para [completar: qué tareas].
+
+## Autores
+Juan Diego Herrera · [LinkedIn](https://www.linkedin.com/in/juan-diego-herrera-b995223a8/) · [GitHub](https://github.com/JuanDiegoHerrera)
+Celina Sosa · [LinkedIn](https://linkedin.com/in/celina-sosa-950881220) · [GitHub](https://github.com/EconoCelina)
