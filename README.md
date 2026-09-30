@@ -25,10 +25,6 @@ Dashboard interactivo sobre la evolución de la producción de gas natural en Ar
 3. **Selección de variables:** nueva tabla solo con las columnas relevantes (fecha, empresa, tipo de recurso, producción de gas).
 4. **Visualización:** dashboard en Looker Studio con filtros por empresa e intervalo temporal, dos KPIs, serie temporal, tabla con mapa de calor y gráfico de participación no convencional.
 
-```sql
--- Agregar aquí tu query de UNION ALL / tabla final
-```
-
 ## Limitaciones y próximos pasos
 - "No convencional" incluye Vaca Muerta pero también otras formaciones; el dataset no permite aislarlas.
 - Algunos nombres de empresa aparecen duplicados por razón social (ej. Pan American Energy); queda pendiente normalizarlos.
