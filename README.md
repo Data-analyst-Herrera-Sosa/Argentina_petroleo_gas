@@ -31,7 +31,7 @@ Dashboard interactivo sobre la evolución de la producción de gas natural en Ar
 - Incorporar producción de petróleo.
 
 ## Herramientas
-BigQuery · SQL · Looker Studio · Desarrollado con asistencia de IA (Gemini) para [completar: qué tareas].
+BigQuery · SQL · Looker Studio · Desarrollado con asistencia de IA (Gemini).
 
 ## Autores
 Juan Diego Herrera · [LinkedIn](https://www.linkedin.com/in/juan-diego-herrera-b995223a8/) · [GitHub](https://github.com/JuanDiegoHerrera)
